@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Project Worker</title>
+</head>
+<center>
+  <body>
+  <h1>Create Project Worker</h1>
+  <form action="#" th:action="@{/project/worker/create}" method="post">
+    <label for="projectId">Projects:</label>
+    <select id="projectId" name="projectId" required>
+      <option value="">Выберите проект</option>
+      <option th:each="project : ${projects}"
+              th:value="${project.getId()}"
+              th:text="${project.getProjectName()}">
+      </option>
+    </select>
+    <br><br>
+    <label for="workerId">Workers:</label>
+    <select id="workerId" name="workerId" required>
+      <option value="">Выберите сотрудника</option>
+      <option th:each="worker : ${workers}"
+              th:value="${worker.getId()}"
+              th:text="${worker.getFirstName()+' '+worker.getRoleName()}">
+      </option>
+    </select>
+    <br><br>
+    <input type="submit" value="Appoint">
+  </form>
+  </body>
+</center>
+</html>
