@@ -7,12 +7,9 @@ import ru.aston.dto.project.ProjectDtoRq;
 import ru.aston.dto.project.ProjectDtoRs;
 import ru.aston.dto.project_worker.ProjectWorkerDtoRq;
 import ru.aston.dto.project_worker.ProjectWorkerDtoRs;
-import ru.aston.entity.Project;
-import ru.aston.entity.Worker;
 import ru.aston.mapper.ProjectMapper;
 import ru.aston.service.ProjectService;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 

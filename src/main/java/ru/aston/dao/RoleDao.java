@@ -6,6 +6,7 @@ import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 import ru.aston.configuration.HibernateConfig;
 import ru.aston.entity.Role;
+
 import java.util.List;
 
 @Repository
