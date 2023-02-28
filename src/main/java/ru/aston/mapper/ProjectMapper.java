@@ -1,13 +1,13 @@
 package ru.aston.mapper;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Component;
 import ru.aston.dto.project.ProjectDtoRq;
 import ru.aston.dto.project.ProjectDtoRs;
 import ru.aston.dto.project_worker.ProjectWorkerDtoRs;
 import ru.aston.entity.Project;
 import ru.aston.entity.Worker;
 
-@Controller
+@Component
 public class ProjectMapper {
 
     public ProjectDtoRs castFromEntity(Project project) {

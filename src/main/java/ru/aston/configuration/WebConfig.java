@@ -17,7 +17,6 @@ import org.thymeleaf.spring6.view.ThymeleafViewResolver;
 public class WebConfig implements WebMvcConfigurer {
     private final ApplicationContext applicationContext;
 
-
     public WebConfig(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
     }
@@ -39,7 +38,6 @@ public class WebConfig implements WebMvcConfigurer {
         templateEngine.setEnableSpringELCompiler(true);
         return templateEngine;
     }
-
 
     @Override
     public void configureViewResolvers(ViewResolverRegistry registry) {

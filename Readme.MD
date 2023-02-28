@@ -9,7 +9,7 @@ MVC приложение, которое позволяет смотреть л�
 * Apache Maven
 * Tomcat
 ## Установка
-* Клонируйте репозиторий <https://github.com/H1tAndRun/aston_hiber>
+* Клонируйте репозиторий <https://github.com/H1tAndRun/aston_hibernate>
 * Выполните команду mvn clean install
 ***
 ## Endpoints GET

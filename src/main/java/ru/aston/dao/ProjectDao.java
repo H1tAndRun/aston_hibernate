@@ -18,7 +18,7 @@ public class ProjectDao {
     public List<Project> getAllProject() {
         Session session = sessionFactory.getCurrentSession();
         session.beginTransaction();
-        List<Project> projects = session.createQuery("from Project ").getResultList();
+        List<Project> projects = session.createQuery("FROM Project ").getResultList();
         session.getTransaction().commit();
         return projects;
     }
@@ -42,7 +42,7 @@ public class ProjectDao {
         Session session = sessionFactory.getCurrentSession();
         try {
             session.beginTransaction();
-            Query query = session.createQuery("delete from Project where id = :id");
+            Query query = session.createQuery("DELETE FROM Project WHERE id = :id");
             query.setParameter("id", id);
             query.executeUpdate();
             session.getTransaction().commit();
