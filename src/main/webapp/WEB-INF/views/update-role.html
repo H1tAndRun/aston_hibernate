@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Role</title>
+</head>
+<center>
+  <body>
+  <h1>Edit Role</h1>
+  <form th:object="${role}" th:action="@{/role/update/{id}(id=${role.getId()})}" method="post">
+    <label for="roleName">Department Name:</label>
+    <input type="text" id="roleName" th:field="*{roleName}" required>
+    <input type="submit" value="Update">
+  </form>
+  </body>
+</center>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Workers</title>
+</head>
+<center>
+  <body>
+  <table>
+    <tr>
+      <th>Role Name</th>
+    </tr>
+    <tr th:each="role: ${roles}">
+      <td th:text="${role.getRoleName()}"></td>
+      <td>
+        <form th:action="@{/role/update/{id}(id=${role.getId()})}" method="get">
+          <button type="submit">Edit</button>
+        </form>
+      </td>
+      <td>
+        <form th:action="@{/role/delete/{id}(id=${role.getId()})}" method="post">
+          <button type="submit">Delete</button>
+        </form>
+      </td>
+    </tr>
+  </table>
+  <p>
+  <form th:action="@{/role/create}" method="get">
+    <button type="submit">Create Role</button>
+  </form>
+  </p>
+  </body>
+</center>
+</html>
